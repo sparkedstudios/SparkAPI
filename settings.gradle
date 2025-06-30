@@ -1,0 +1,6 @@
+rootProject.name = "SparkAPI"
+
+include "api"
+include "core"
+include "nms:v1_8_R3"
+include "nms:v1_21_R1"

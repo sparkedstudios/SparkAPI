@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'github.sparked.studios'
+version = '1.0'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+    apply plugin: 'com.github.johnrengelman.shadow'
+
+    java {
+        toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url = "https://repo.papermc.io/repository/maven-public/" }
+        maven { url = "https://jitpack.io" }
+        maven { url = "https://repo.extendedclip.com/content/repositories/placeholderapi/" }
+        maven { url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/" }
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+        options.compilerArgs += ["-parameters"]
+    }
+
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                from components.java
+                groupId = project.group
+                artifactId = project.name
+                version = rootProject.version
+            }
+        }
+        repositories {
+            mavenLocal()
+        }
+    }
+}
