@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/SparkAPI.api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api/SparkAPI.api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/SparkAPI.api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/api/SparkAPI.api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/SparkAPI.core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/SparkAPI.core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/SparkAPI.core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/SparkAPI.core.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SparkAPI.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SparkAPI.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nms/v1_21_R1/SparkAPI.nms.v1_21_R1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/nms/v1_21_R1/SparkAPI.nms.v1_21_R1.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nms/v1_21_R1/SparkAPI.nms.v1_21_R1.test.iml" filepath="$PROJECT_DIR$/.idea/modules/nms/v1_21_R1/SparkAPI.nms.v1_21_R1.test.iml" />
+    </modules>
+  </component>
+</project>
