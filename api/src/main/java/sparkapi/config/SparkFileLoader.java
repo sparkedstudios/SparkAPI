@@ -1,10 +1,10 @@
 package sparkapi.config;
 
-import sparkapi.config.annotations.SparkFile;
-import sparkapi.config.annotations.FileType;
-import sparkapi.config.internal.SparkConfigVersionValidator;
-
 import org.bukkit.plugin.Plugin;
+import sparkapi.config.annotations.FileType;
+import sparkapi.config.annotations.SparkFile;
+import sparkapi.config.internal.SparkConfigLogger;
+import sparkapi.config.internal.SparkConfigVersionValidator;
 
 import java.lang.reflect.Field;
 
@@ -15,31 +15,33 @@ public class SparkFileLoader {
             if (!field.isAnnotationPresent(SparkFile.class)) continue;
 
             SparkFile annotation = field.getAnnotation(SparkFile.class);
-            FileType type = annotation.type();
             String fileName = annotation.name();
+            FileType type = annotation.type();
 
             try {
                 field.setAccessible(true);
 
                 switch (type) {
-                    case CONFIG -> {
+                    case CONFIG: {
                         SparkConfig config = new SparkConfig(plugin, fileName);
                         SparkConfigVersionValidator.validate(plugin, config, expectedConfigVersion);
                         field.set(null, config);
+                        break;
                     }
-                    case MESSAGES -> {
+                    case MESSAGES: {
                         SparkConfig messages = new SparkConfig(plugin, fileName);
                         SparkConfigVersionValidator.validate(plugin, messages, expectedMessagesVersion);
                         field.set(null, messages);
+                        break;
                     }
-                    case GENERIC -> {
+                    case GENERIC: {
                         SparkYML yml = new SparkYML(plugin, fileName);
                         field.set(null, yml);
+                        break;
                     }
                 }
-
             } catch (Exception e) {
-                plugin.getLogger().severe("[SparkAPI] Error uploading file: " + fileName + " → " + e.getMessage());
+                SparkConfigLogger.error(plugin, fileName, "Error loading: " + e.getMessage());
             }
         }
     }

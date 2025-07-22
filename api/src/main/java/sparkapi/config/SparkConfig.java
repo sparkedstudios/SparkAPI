@@ -9,6 +9,6 @@ public class SparkConfig extends SparkYML {
     }
 
     public String getVersion() {
-        return get().getString("version", "undefined");
+        return getConfig().getString("version", "undefined");
     }
 }
