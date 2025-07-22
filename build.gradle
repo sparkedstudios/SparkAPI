@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'github.sparked.studios'
-version = '1.0.0'
+version = '1.0'
 
 subprojects {
     apply plugin: 'java'
