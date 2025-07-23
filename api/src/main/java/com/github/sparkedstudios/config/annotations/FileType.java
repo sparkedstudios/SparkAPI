@@ -1,4 +1,4 @@
-package sparkapi.config.annotations;
+package com.github.sparkedstudios.config.annotations;
 
 public enum FileType {
     CONFIG,

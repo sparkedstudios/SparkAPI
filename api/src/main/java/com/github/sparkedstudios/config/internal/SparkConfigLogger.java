@@ -1,4 +1,4 @@
-package sparkapi.config.internal;
+package com.github.sparkedstudios.config.internal;
 
 import org.bukkit.plugin.Plugin;
 

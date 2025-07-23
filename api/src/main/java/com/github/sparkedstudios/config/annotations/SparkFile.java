@@ -1,4 +1,4 @@
-package sparkapi.config.annotations;
+package com.github.sparkedstudios.config.annotations;
 
 import java.lang.annotation.*;
 

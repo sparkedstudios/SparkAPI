@@ -1,7 +1,7 @@
-package sparkapi.config.internal;
+package com.github.sparkedstudios.config.internal;
 
 import org.bukkit.plugin.Plugin;
-import sparkapi.config.SparkConfig;
+import com.github.sparkedstudios.config.SparkConfig;
 
 public class SparkConfigVersionValidator {
 

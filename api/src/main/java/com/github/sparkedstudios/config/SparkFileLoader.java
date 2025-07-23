@@ -1,10 +1,10 @@
-package sparkapi.config;
+package com.github.sparkedstudios.config;
 
 import org.bukkit.plugin.Plugin;
-import sparkapi.config.annotations.FileType;
-import sparkapi.config.annotations.SparkFile;
-import sparkapi.config.internal.SparkConfigLogger;
-import sparkapi.config.internal.SparkConfigVersionValidator;
+import com.github.sparkedstudios.config.annotations.FileType;
+import com.github.sparkedstudios.config.annotations.SparkFile;
+import com.github.sparkedstudios.config.internal.SparkConfigLogger;
+import com.github.sparkedstudios.config.internal.SparkConfigVersionValidator;
 
 import java.lang.reflect.Field;
 

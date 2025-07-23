@@ -1,9 +1,9 @@
-package sparkapi.config;
+package com.github.sparkedstudios.config;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
-import sparkapi.config.internal.SparkConfigLogger;
+import com.github.sparkedstudios.config.internal.SparkConfigLogger;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
